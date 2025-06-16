@@ -1,0 +1,12 @@
+[project]
+name = "sys-dash-py"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "d>=0.2.2",
+    "nicegui[highcharts]>=2.19.0",
+    "pandas>=2.3.0",
+    "psutil>=7.0.0",
+]

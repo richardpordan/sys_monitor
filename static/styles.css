@@ -1,0 +1,128 @@
+:root {
+  --nicegui-default-padding: 0px;
+  --nicegui-default-gap: 0px;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: #00ffe7;
+  font-family: 'Orbitron', sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+.nicegui-content {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+}
+
+header {
+  border-bottom: 2px solid #00ffe7;
+  width: 100%;
+}
+
+header h1 {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  text-shadow: 0 0 10px #00ffe7;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 45% 55%;
+  gap: 10px;
+}
+
+.triple-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+.single-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.panel {
+  background-color: #0d0d0d;
+  border: 2px solid #00ffe7;
+  box-shadow: 0 0 10px #00ffe777;
+  border-radius: 10px;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.panel h2 {
+  margin: 0;
+  padding: 0;
+  text-shadow: 0 0 10px #00ffe7;
+  font-size: 24px;
+  padding: 0px;
+}
+
+.text {
+  font-size: 20px;
+  color: #00ffe7;
+  text-shadow: 0 0 3px #00ffe7;
+}
+ 
+.blink-red, .blink-yellow {
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.blink-red {
+  color: red;
+  text-shadow: 0 0 8px red;
+}
+
+.blink-yellow {
+  color: yellow;
+  text-shadow: 0 0 8px yellow;
+}
+
+@media (max-width: 768px) {
+  .triple-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+.chart {
+  background-color: #1d1d1d;
+  border-radius: 10px;
+}
+
+canvas:hover {
+  cursor: pointer;
+}
+
+#cpu-panel:hover, 
+#cpu-temp-panel:hover,
+#mem-panel:hover, 
+#gpu-panel:hover {
+  border: 3px solid #00ffe7;
+  box-shadow: 0 0 15px #00ffe777;
+  cursor: pointer;
+}
